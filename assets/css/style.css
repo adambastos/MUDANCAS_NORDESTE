@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+header{
+    height: 100px;
+    background-color: black;
+}
+.header{
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+header img{
+    width: 95px;
+    height: 95px;
+}
+.logo{
+    width: 100px;
+}
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu ul,
+.menu li{
+    list-style: none;
+}
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.menu .wpp{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+    text-decoration: none;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    
+}
+.menu a img{
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    
+}
+.menu li a:hover{
+    border-bottom: 3px solid white ;
+    color: #0097b2;
+}
+.menu .ultimo{
+    margin-right: 30px;    
+}
+.banner{
+    height: calc(100vh - 100px);
+    background-color: #404c56;
+    background-image: url('../../img/banner1.jpg');
+    background-size: cover; /*Ajuste o tamanho da imagem para que ela preencha todo o espaço disponível*/
+    background-position: center;
+    overflow: hidden;      /*Tudo que passar do tamanho da área, será ignorado*/
+}
+.banner .sliders{
+    width: 1000vw;
+    height: 100%;
+}
+.banner .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.banner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.banner h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0097b2;
+}
+
+/*Efeito texto aparecendo aos poucos*/
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Estilos para o texto */
+  .banner h1 {
+    opacity: 0;
+    animation: fadeIn 3s ease forwards; /* Tempo de animação de 2 segundos */
+  }
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px); /* Desce de cima para baixo */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Estilos para o h1 */
+  h1 {
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+  }
+
+  /* Estilos para o h2 */
+  h2 {
+    opacity: 0;
+    animation: fadeInDown 2s ease forwards;
+    animation-delay: 0.5s; /* O h2 começa com um pequeno atraso para aparecer depois */
+  }
+
+
+
+  /*Seção Sobre*/
+  .about-section {
+    background-color: white;
+    padding: 80px 0;
+    color: #0097b2;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    color: black;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.about-section p span{
+    color: #0097b2;
+    text-decoration: underline;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.about-box {
+    background-color: white;
+    color: #333;
+    width: 350px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.about-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.about-box h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #0097b2;
+}
+
+.about-box p {
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-box {
+        width: 90%;
+    }
+}
+
+/*Seção Serviços*/
+.services-section {
+    background: linear-gradient(135deg, #273b3b, #1a2c2b, #000303);
+    padding: 80px 0;
+    color: #0097b2;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.services-section p {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    color: white;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.service-box {
+    background-color: white;
+    color: #333;
+    width: 300px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #0097b2;
+}
+
+.service-box p {
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%;
+    }
+}
+
