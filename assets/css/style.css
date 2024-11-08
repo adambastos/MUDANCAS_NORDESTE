@@ -61,8 +61,7 @@ header img{
     text-decoration: none;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 13px;
-    
+    font-size: 13px;  
 }
 .menu a img{
     width: 30px;
@@ -76,7 +75,7 @@ header img{
     color: #0097b2;
 }
 .menu .ultimo{
-    margin-right: 30px;    
+    margin-right: 25px;    
 }
 .banner{
     height: calc(100vh - 100px);
@@ -146,19 +145,20 @@ header img{
   }
 
   /* Estilos para o h1 */
-  h1 {
+    h1 {
     opacity: 0;
     animation: fadeInUp 2s ease forwards;
   }
 
   /* Estilos para o h2 */
-  h2 {
+    h2 {
     opacity: 0;
     animation: fadeInDown 2s ease forwards;
     animation-delay: 0.5s; /* O h2 começa com um pequeno atraso para aparecer depois */
   }
-
-
+  #realimg{
+    color: #0097b2;
+  }
 
   /*Seção Sobre*/
   .about-section {
@@ -192,7 +192,7 @@ header img{
 .about-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
     padding: 0 20px;
 }
@@ -203,7 +203,7 @@ header img{
     width: 350px;
     border-radius: 15px;
     padding: 30px 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -266,7 +266,7 @@ header img{
 .services-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
     padding: 0 20px;
 }
@@ -315,3 +315,214 @@ header img{
     }
 }
 
+/*Seção de caminhões*/
+.caminhoes-section {
+    background-color: white;
+    padding: 80px 0;
+    color: #0097b2;
+    text-align: center;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.caminhoes-section h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.caminhoes-section p{
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    color: black;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.caminhoes-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.gallery-image{
+    color: #333;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-image:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.gallery-image img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .caminhoes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-image {
+        width: 90%;
+    }
+}
+
+/*Seção Embalagens*/
+
+.embalagem-section {
+    background: linear-gradient(135deg, #273b3b, #1a2c2b, #000303);
+    padding: 80px 0;
+    color: #0097b2;
+    text-align: center;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.embalagem-section h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.embalagem-section p{
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.embalagem-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.gallery-image{
+    color: #333;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-image:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.gallery-image img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .embalagem-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-image {
+        width: 90%;
+    }
+}
+
+/*Seção destinos*/
+.destino-section{
+    background: white;
+    padding: 80px 0;
+    text-align: center;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    align-items: center;
+}
+.destino-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.destino-container .box{
+    margin-top: 30px;
+    background-color: white;
+    color: #0097b2;
+    width: 300px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+.destino-container .box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.destino-section h2{
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.destino-section img{
+    width: 40px;
+    height: 40px;
+}
+@media (max-width: 768px) {
+    .destino-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/*Seção Contato*/
+.contato-section{
+    background: linear-gradient(135deg, #273b3b, #1a2c2b, #000303);
+    padding: 80px 0;
+    text-align: center;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    align-items: center;
+}
+.contato-section h2{
+    color: white;
+    margin-bottom: 20px;
+}
+.contato-section h3{
+    color: #0097b2;
+}
+
+.icontato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.icontato img{
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+@media (max-width: 768px) {
+    .contato-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
