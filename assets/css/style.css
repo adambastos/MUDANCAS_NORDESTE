@@ -359,8 +359,9 @@ header img{
       margin-top: 15px;
       margin-bottom: 15px;
     }
-    
-
+    header img{
+      margin-left: 20px;
+    }
   }
 
   /*Seção Sobre*/
