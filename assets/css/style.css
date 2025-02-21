@@ -77,6 +77,7 @@ header img{
 .menu .ultimo{
     margin-right: 25px;    
 }
+
 .banner{
     height: calc(100vh - 100px);
     background-color: #404c56;
@@ -158,6 +159,208 @@ header img{
   }
   #realimg{
     color: #0097b2;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  header {
+    height: 100px;
+    background-color: black;
+  }
+  .header {
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    color: white;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* necessário para posicionamento do ícone no mobile */
+  }
+  header img {
+    width: 95px;
+    height: 95px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menu ul,
+  .menu li {
+    list-style: none;
+  }
+  .menu ul {
+    display: flex;
+  }
+  .menu li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .menu .wpp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+    text-decoration: none;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13px;  
+  }
+  .menu a img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .menu li a:hover {
+    border-bottom: 3px solid white;
+    color: #0097b2;
+  }
+  .banner {
+    height: calc(100vh - 100px);
+    background-color: #404c56;
+    background-image: url('../../img/banner1.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  .banner .sliders {
+    width: 1000vw;
+    height: 100%;
+  }
+  .banner .slide {
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+  }
+  .banner h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0097b2;
+    opacity: 0;
+    animation: fadeInDown 2s ease forwards;
+    animation-delay: 0.5s;
+  }
+  /* Animações */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #realimg {
+    color: #0097b2;
+  }
+  
+  /* Responsividade para dispositivos móveis */
+  @media screen and (max-width: 768px) {
+    /* Esconde o menu original e exibe-o em forma de coluna */
+    .menu nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100px; /* abaixo do header */
+      right: 0;
+      width: 100%;
+      background-color: black;
+      z-index: 1000;
+    }
+    .menu nav ul li {
+      width: 100%;
+    }
+    .menu nav ul li a {
+      padding: 15px;
+      padding-top: 15px;
+      text-align: center;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+    }
+  
+    /* Exibe o botão de menu (hambúrguer) */
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      color: white;
+      position: absolute;
+      right: 23px;
+      top: 35px;
+    }
+    /* Ao ativar, mostra o menu */
+    .menu.active nav ul {
+      display: flex;
+    }
+    /* Ajustes no banner para melhor leitura em telas pequenas */
+    .banner h1 {
+      font-size: 28px;
+    }
+    .banner h2 {
+      font-size: 18px;
+    }
+    .banner .slide{
+      display: flex;
+      justify-content: center;
+      padding-left: 24px;
+      padding-right: 22px;
+    }
+    .menu .wpp{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    
+
   }
 
   /*Seção Sobre*/
@@ -513,12 +716,41 @@ header img{
     justify-content: center;
     gap: 30px;
 }
-.icontato img{
-    width: 45px;
-    height: 45px;
-    margin-bottom: 5px;
-    margin-top: 30px;
+.icontato img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+.icontato a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.icontato a {
+  position: relative;
+  display: inline-block;
+}
+.icontato a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.icontato a:hover::after {
+  width: 120%;
+  height: 120%;
+  opacity: 0.5;
+}
+
 @media (max-width: 768px) {
     .contato-section {
         flex-direction: column;

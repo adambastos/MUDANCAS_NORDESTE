@@ -9,6 +9,21 @@
         window.onload = function() {
             window.scrollTo(0, 0);
         }
+        document.addEventListener("DOMContentLoaded", function() {
+        // Cria o ícone de menu (hambúrguer) e o insere na .header
+        const menuToggle = document.createElement("div");
+        menuToggle.classList.add("menu-toggle");
+        menuToggle.innerHTML = "&#9776;"; // ícone hambúrguer
+        document.querySelector(".header").appendChild(menuToggle);
+        
+        // Seleciona o container do menu
+        const menu = document.querySelector(".menu");
+        
+        // Toggle da classe para mostrar/ocultar o menu ao clicar no ícone
+        menuToggle.addEventListener("click", function() {
+            menu.classList.toggle("active");
+        });
+        });
     </script>
 </head>
 <body>
@@ -26,7 +41,7 @@
                     <ul>
                         <li><a href="#Sobre">Sobre</a></li>
                         <li><a href="#Servicos">Serviços</a></li>
-                        <li><a class="ultimo" href="#contato">Contato</a></li>
+                        <li><a href="#contato">Contato</a></li>
                         <a class="wpp" href="https://wa.me/5561991832305?text=Olá,%20gostaria%20de%20agendar%20um%20orçamento." target="_blank"><img src="img/wpp2.png" alt="">Fale conosco</a>
                     </ul>
                 </nav>
@@ -49,7 +64,7 @@
         
         <section id="Sobre" class="about-section">
             <h2>Sobre Nós</h2>
-            <p>Somos uma empresa de mudanças interestaduais dedicada a fornecer serviços de alta qualidade e uma experiência de mudança sem complicações. Com <span>mais de 25 anos de experiência</span> no setor, realizando mudanças para toda a região nordeste, garantimos que sua mudança seja realizada com eficiência, segurança e atenção aos detalhes.</p>
+            <p>Somos uma empresa de mudanças interestaduais dedicada a fornecer serviços de alta qualidade e uma experiência de mudança sem complicações. Com <span>mais de 25 anos de experiência</span> no setor, realizando mudanças para toda a região nordeste, garantimos que sua mudança seja realizada com eficiência, segurança e atenção aos mínimos detalhes.</p>
             
             <div class="about-container">
                 <div class="about-box">
@@ -98,7 +113,7 @@
                 <div class="service-box">
                     <img src="img/sectionservicos/veiculo.png" alt="">
                     <h3>Transporte de Veículo</h3>
-                    <p>Quer levar seu carro para outro estado e não quer ir dirigindo? Nós o levamos!</p>
+                    <p>Transporte de carros e motos.</p>
                 </div>
 
                 <div class="service-box">
@@ -146,7 +161,7 @@
         
         <section class="embalagem-section">
             <h2>Organização</h2>
-            <p>Os volumes são muito bem embalados e alocados dentro do veículo, de modo que sejam transportados com total segurança e cheguem ao destino sem amassados, arranhões ou qualquer possível dano.</p>
+            <p>Os volumes são muito bem embalados e alocados dentro do veículo, de modo que sejam transportados com total segurança e cheguem ao destino sem amassados, arranhões ou quaisquer possíveis danos.</p>
             <p>As mudanças são muito bem separadas para que não haja risco dos itens se misturarem ou extraviarem.</p>
             <p id="realimg">(Imagens reais)</p>
             
